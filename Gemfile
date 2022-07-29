@@ -13,7 +13,7 @@ gem "sprockets-rails"
 #gem "sqlite3", "~> 1.4"
 #writing below code from odin project
 #here
-group :development, :test do
+group :development , :test do
   gem 'sqlite3'
 end
 group :production do
