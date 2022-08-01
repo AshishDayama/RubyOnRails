@@ -300,3 +300,32 @@ Processing by CarsController#index as HTML
 Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 3404)
 
 
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cars" for 127.0.0.1 at 2022-08-01 16:31:35 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CarsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:6
+  Rendered cars/_car.html.erb (Duration: 0.6ms | Allocations: 260)
+  Rendered cars/index.html.erb within layouts/application (Duration: 14.8ms | Allocations: 7108)
+  Rendered layout layouts/application.html.erb (Duration: 68.8ms | Allocations: 41177)
+Completed 200 OK in 86ms (Views: 72.1ms | ActiveRecord: 0.8ms | Allocations: 47151)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2022-08-01 16:35:10 +0530
+Processing by CarsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/_form.html.erb (Duration: 18.3ms | Allocations: 8431)
+  Rendered cars/new.html.erb within layouts/application (Duration: 19.6ms | Allocations: 8753)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 10941)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms | Allocations: 11373)
+
+
