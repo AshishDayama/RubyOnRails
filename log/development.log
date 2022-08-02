@@ -329,3 +329,55 @@ Processing by CarsController#new as HTML
 Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms | Allocations: 11373)
 
 
+Started GET "/cars" for 127.0.0.1 at 2022-08-01 17:27:34 +0530
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CarsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:6
+  Rendered cars/_car.html.erb (Duration: 0.5ms | Allocations: 260)
+  Rendered cars/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 11063)
+  Rendered layout layouts/application.html.erb (Duration: 309.5ms | Allocations: 102673)
+Completed 200 OK in 324ms (Views: 313.2ms | ActiveRecord: 0.6ms | Allocations: 109803)
+
+
+Started GET "/cars/1" for 127.0.0.1 at 2022-08-01 17:27:40 +0530
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:63:in `set_car'
+  Rendering layout layouts/application.html.erb
+  Rendering cars/show.html.erb within layouts/application
+  Rendered cars/_car.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered cars/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 837)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3018)
+Completed 200 OK in 20ms (Views: 9.5ms | ActiveRecord: 0.4ms | Allocations: 6095)
+
+
+Started GET "/cars/1/edit" for 127.0.0.1 at 2022-08-01 17:27:42 +0530
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:63:in `set_car'
+  Rendering layout layouts/application.html.erb
+  Rendering cars/edit.html.erb within layouts/application
+  Rendered cars/_form.html.erb (Duration: 13.1ms | Allocations: 5905)
+  Rendered cars/edit.html.erb within layouts/application (Duration: 14.4ms | Allocations: 6277)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 8457)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.2ms | Allocations: 9304)
+
+
+Started GET "/cars" for 127.0.0.1 at 2022-08-01 17:27:45 +0530
+Processing by CarsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:6
+  Rendered cars/_car.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered cars/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 881)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3083)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 3426)
+
+
